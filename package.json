@@ -1,0 +1,33 @@
+{
+  "name": "template-node-api",
+  "version": "1.0.0",
+  "description": "Template for project backend and Node",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_PATH=. npx nodemon index.js",
+    "start": "NODE_ENV=production NODE_PATH=. node index.js",
+    "migrate": "NODE_PATH=. npx sequelize db:migrate",
+    "seeds": "NODE_PATH=. npx sequelize db:seed",
+    "migrate:undo": "NODE_PATH=. npx sequelize db:migrate:undo",
+    "seed:undo": "NODE_PATH=. npx sequelize db:seed:undo",
+    "migrate:test": "NODE_ENV=test npm run migrate",
+    "seeds:test": "NODE_ENV=test npm run seeds",
+    "test": "npm run migrate:test && npm run seeds:test && NODE_ENV=test NODE_PATH=. npx jest --runInBand --detectOpenHandles --coverage --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.18",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.11"
+  }
+}

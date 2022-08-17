@@ -1,0 +1,7 @@
+database/test.db
+*.swp
+.env
+package-lock.json
+.git/
+node_modules/
+coverage/

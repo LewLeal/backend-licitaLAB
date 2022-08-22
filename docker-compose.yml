@@ -1,8 +1,8 @@
 services:
-  # API server 
+  # API server
   api-server:
     env_file: .env
-    image: lewis-express-ionix-api:1.0.0
+    image: lewis-express-licitalab-api:1.0.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,4 +22,3 @@ services:
       POSTGRES_USER: ${DEV_DB_USERNAME}
       POSTGRES_DB: ${DEV_DB_NAME}
       POSTGRES_PASSWORD: ${DEV_DB_PASSWORD}
-
